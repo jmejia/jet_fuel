@@ -1,0 +1,5 @@
+require 'uri'
+require 'models/generator'
+require 'models/url'
+require 'models/private_url'
+require 'models/user'

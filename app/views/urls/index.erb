@@ -1,0 +1,31 @@
+<h2>URLs by Popularity</h2>
+<table class="table">
+  <tr>
+    <th>Truncated Original</th>
+    <th>Shortened</th>
+    <th>Visits</th>
+  </tr>
+  <% @popular_urls.each do |url| %>
+    <tr>
+      <td><%= url.original[0..30] %>...</td>
+      <td><a href="/<%= url.shortened %>"><%= url.shortened %></a></td>
+      <td><%= url.count %></td>
+    </tr>
+  <% end %>
+</table>
+
+<h2>URLs by Creation</h2>
+<table class="table">
+  <tr>
+    <th>Truncated Original</th>
+    <th>Shortened</th>
+    <th>Created At</th>
+  </tr>
+  <% @recent_urls.each do |url| %>
+    <tr>
+      <td><%= url.original[0..30] %>...</td>
+      <td><a href="/<%= url.shortened %>"><%= url.shortened %></a></td>
+      <td><%= url.created_at %></td>
+    </tr>
+  <% end %>
+</table>
