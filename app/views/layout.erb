@@ -13,7 +13,13 @@
         <ul class="nav">
           <li><a href="/">Home</a></li>
           <li><a href="/urls">URLs</a></li>
-          <li><a href="/login">Login</a></li>
+          <li><a href="/users/new">Register</a></li>
+          <% if @current_user %>
+            <li><a style="color:red;" href="/users/<%= @current_user.username %>"><%=@current_user.username%></a></li>
+            <li><a href="/logout">Logout</a></li>
+          <% else %>
+            <li><a href="/">Login</a></li>
+          <% end %>
         </ul>
       </div>
     </div>

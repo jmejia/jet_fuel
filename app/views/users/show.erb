@@ -1,0 +1,16 @@
+<h2><%= @user.username %></h2>
+<h4>Your URLs</h4>
+<table class="table">
+  <tr>
+    <th>Truncated Original</th>
+    <th>Shortened</th>
+    <th>Visits</th>
+  </tr>
+  <% @private_urls.each do |private_url| %>
+    <tr>
+      <td><%= private_url.original[0..30] %>...</td>
+      <td><a target="_blank" href="/<%= private_url.shortened %>"><%= "#{request.base_url}/#{private_url.shortened}" %></a></td>
+      <td><%= private_url.count %></td>
+    </tr>
+  <% end %>
+</table>
