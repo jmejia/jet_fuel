@@ -82,13 +82,13 @@ class Server < Sinatra::Base
 
   get '/users/:username/urls/:shortened/?' do
     user = User.find_by_username(params[:username])
-    if user && user.id == @current_user.id
+    if @current_user && user.id == @current_user.id
       @url = PrivateUrl.find_by_shortened(params[:shortened])
       if @url
         @short_link = "#{request.base_url}/#{@url.shortened}"
         erb "urls/show".to_sym
       else
-        redirect to("/")
+        redirect to("/users/#{@current_user.username}")
       end
     else
       redirect to("/")

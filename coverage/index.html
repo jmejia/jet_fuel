@@ -14,18 +14,18 @@
       <img src="./assets/0.7.1/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2013-03-14T09:38:52-06:00">2013-03-14T09:38:52-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2013-03-14T11:24:10-06:00">2013-03-14T11:24:10-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">92.56%</span></span>
+    (<span class="covered_percent"><span class="green">97.52%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.97
+         3.1
        </span>
     </span> hits/line)
   </h2>
@@ -33,8 +33,8 @@
   <div>
     <b>8</b> files in total.
     <b>121</b> relevant lines. 
-    <span class="green"><b>112</b> lines covered</span> and
-    <span class="red"><b>9</b> lines missed </span>
+    <span class="green"><b>118</b> lines covered</span> and
+    <span class="red"><b>3</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -107,7 +107,7 @@
         <td>7</td>
         <td>7</td>
         <td>0</td>
-        <td>2.4</td>
+        <td>3.0</td>
       </tr>
       
       <tr>
@@ -122,12 +122,12 @@
       
       <tr>
         <td class="strong"><a href="#8d29ca689a9b3cd05505ba1605538713e9ee5adb" class="src_link" title="app/server.rb">app/server.rb</a></td>
-        <td class="green strong">90.11 %</td>
+        <td class="green strong">96.7 %</td>
         <td>150</td>
         <td>91</td>
-        <td>82</td>
-        <td>9</td>
-        <td>1.7</td>
+        <td>88</td>
+        <td>3</td>
+        <td>2.1</td>
       </tr>
       
     </tbody>
@@ -442,14 +442,14 @@
           <code class="ruby">  def generate_salted_password(raw_password)</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="8">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="8" data-linenumber="8">
+          <span class="hits">8</span>
           
           <code class="ruby">    password_signer = Digest::HMAC.new(salt, Digest::SHA1)</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="9">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="8" data-linenumber="9">
+          <span class="hits">8</span>
           
           <code class="ruby">    password_signer.hexdigest(raw_password)</code>
         </li>
@@ -521,11 +521,11 @@
         <div class="source_table" id="8d29ca689a9b3cd05505ba1605538713e9ee5adb">
   <div class="header">
     <h3>app/server.rb</h3>
-    <h4><span class="green">90.11 %</span> covered</h4>
+    <h4><span class="green">96.7 %</span> covered</h4>
     <div>
       <b>91</b> relevant lines. 
-      <span class="green"><b>82</b> lines covered</span> and
-      <span class="red"><b>9</b> lines missed.</span>
+      <span class="green"><b>88</b> lines covered</span> and
+      <span class="red"><b>3</b> lines missed.</span>
     </div>
   </div>
   
@@ -610,8 +610,8 @@
           <code class="ruby">  before do</code>
         </li>
       
-        <li class="covered" data-hits="25" data-linenumber="14">
-          <span class="hits">25</span>
+        <li class="covered" data-hits="29" data-linenumber="14">
+          <span class="hits">29</span>
           
           <code class="ruby">    @current_user ||= User.find(session[:user_id]) if session[:user_id]</code>
         </li>
@@ -658,50 +658,50 @@
           <code class="ruby">  post &quot;/login/?&quot; do</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="22">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="8" data-linenumber="22">
+          <span class="hits">8</span>
           
           <code class="ruby">    user = User.find_by_username(params[:username])</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="23">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="8" data-linenumber="23">
+          <span class="hits">8</span>
           
           <code class="ruby">    if user</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="24">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="7" data-linenumber="24">
+          <span class="hits">7</span>
           
           <code class="ruby">      salt = user.salt</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="25">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="7" data-linenumber="25">
+          <span class="hits">7</span>
           
           <code class="ruby">      raw_pass = params[:password]</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="26">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="7" data-linenumber="26">
+          <span class="hits">7</span>
           
           <code class="ruby">      salted_password = user.generate_salted_password(raw_pass)</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="27">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="6" data-linenumber="27">
+          <span class="hits">6</span>
           
           <code class="ruby">      if user.salted_password == salted_password</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="28">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="5" data-linenumber="28">
+          <span class="hits">5</span>
           
           <code class="ruby">        session[:user_id] = user.id</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="29">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="5" data-linenumber="29">
+          <span class="hits">5</span>
           
           <code class="ruby">        redirect to(&quot;/users/#{user.username}&quot;)</code>
         </li>
@@ -1030,38 +1030,38 @@
           <code class="ruby">  get '/users/:username/urls/:shortened/?' do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="84">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="3" data-linenumber="84">
+          <span class="hits">3</span>
           
           <code class="ruby">    user = User.find_by_username(params[:username])</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="85">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="3" data-linenumber="85">
+          <span class="hits">3</span>
           
-          <code class="ruby">    if user &amp;&amp; user.id == @current_user.id</code>
+          <code class="ruby">    if @current_user &amp;&amp; user.id == @current_user.id</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="86">
-          
+        <li class="covered" data-hits="2" data-linenumber="86">
+          <span class="hits">2</span>
           
           <code class="ruby">      @url = PrivateUrl.find_by_shortened(params[:shortened])</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="87">
-          
+        <li class="covered" data-hits="2" data-linenumber="87">
+          <span class="hits">2</span>
           
           <code class="ruby">      if @url</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="88">
-          
+        <li class="covered" data-hits="1" data-linenumber="88">
+          <span class="hits">1</span>
           
           <code class="ruby">        @short_link = &quot;#{request.base_url}/#{@url.shortened}&quot;</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="89">
-          
+        <li class="covered" data-hits="1" data-linenumber="89">
+          <span class="hits">1</span>
           
           <code class="ruby">        erb &quot;urls/show&quot;.to_sym</code>
         </li>
@@ -1072,10 +1072,10 @@
           <code class="ruby">      else</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="91">
+        <li class="covered" data-hits="1" data-linenumber="91">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">        redirect to(&quot;/&quot;)</code>
+          <code class="ruby">        redirect to(&quot;/users/#{@current_user.username}&quot;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="92">
@@ -1090,8 +1090,8 @@
           <code class="ruby">    else</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="94">
-          
+        <li class="covered" data-hits="1" data-linenumber="94">
+          <span class="hits">1</span>
           
           <code class="ruby">      redirect to(&quot;/&quot;)</code>
         </li>

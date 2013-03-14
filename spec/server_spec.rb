@@ -141,7 +141,19 @@ describe Server do
     it "redirects to home page if not logged in" do
       get "/logout"
       get "/users/jmejia/urls/eihbji"
-      expect(last_response["Location"]).to include("/")
+      expect(last_response["Location"][-1]).to eq("/")
+    end
+
+    it "displays the url show page if user and private url are valid" do
+      post "/login", {username: "jmejia", password: "asdf"}
+      get "/users/jmejia/urls/eihbji"
+      expect(last_response.body).to include("Shortened URL")
+    end
+
+    it "redirects to current user page if logged in and private url is not valid" do
+      post "/login", {username: "jmejia", password: "asdf"}
+      get "/users/jmejia/urls/eihbjasdfadsf"
+      expect(last_response["Location"]).to include("users/jmejia")
     end
   end
 end
