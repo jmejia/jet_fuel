@@ -30,6 +30,7 @@ GEM
     lumberjack (1.0.2)
     method_source (0.8.1)
     multi_json (1.6.1)
+    pg (0.14.1)
     pry (0.9.12)
       coderay (~> 1.0.5)
       method_source (~> 0.8)
@@ -75,6 +76,7 @@ PLATFORMS
 
 DEPENDENCIES
   guard-rspec
+  pg
   rack
   rack-test
   rake
